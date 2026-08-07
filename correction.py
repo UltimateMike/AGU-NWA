@@ -3,9 +3,9 @@ import time
 Balance = 50000
 UserPin = 2255
 
+
 def UserInput(): 
     UserPinInput = int(input(f"Please enter your pin to continue::\n"))
-    print("please wait..")
     if UserPinInput == UserPin: 
         time.sleep(2)
         print(":::Welcome To Ultimate Micro Finance Bank:::")
@@ -44,18 +44,16 @@ def Deposit():
                  
 def Withdraw():
     global Balance
-    userWithdraw = int(input("How much do you want to withdraw?\n"))
-    if userWithdraw >= Balance:
-        print("Processing...")
-        time.sleep(2)
-        print("Insufficient Funds\n Please Try Again")
-        Withdraw()
-    elif userWithdraw < Balance:
-        print("Processing...")
-        time.sleep(2)
-        print("Withdrawal Successful")
-        Balance = Balance - userWithdraw
-        AnotherTransaction()
+    amount = float(input("enter amount to withdrawn"))
+    if amount <= 0:
+        print("please enter a valid amount.")
+    elif  amount <= Balance:
+        Balance = Balance - amount 
+        print("withdrawal successful")
+        print("Remaining Balance:", Balance)
+    else:
+        print("Insufficient funds")
+    AnotherTransaction()
         
 def AnotherTransaction():
     userInput = int(input("Will you like to do another Transaction?\n1.Yes\n2.No\n"))
