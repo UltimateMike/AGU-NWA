@@ -17,15 +17,21 @@ def UserInput():
          
          
 def BankOperations():
-    userInput = int(input("What would you like to do?\n1.Check Balance\n2Deposit\n3.Withdraw\n4.Exit\n"))
-    if userInput == 1:
-        CheckBalance()
-    elif userInput == 2:
-        Deposit()
-    elif userInput == 3:
-        Withdraw()
-    elif userInput == 4: 
-        exit()
+    while True:
+        try:
+            userInput = int(input("What would you like to do?\n1.Check Balance\n2Deposit\n3.Withdraw\n4.Exit\n"))
+            if userInput == 1:
+                CheckBalance()
+            elif userInput == 2:
+                Deposit()
+            elif userInput == 3:
+                Withdraw()
+            elif userInput == 4: 
+                exit()
+            else:
+                print("Please select any numbers from 1-4")
+        except ValueError:
+                print("Please enter a valid number not a string")
         
 def CheckBalance():
         print("Please Wait::::::::::::")
