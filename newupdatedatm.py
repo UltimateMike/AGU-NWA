@@ -7,7 +7,7 @@ UserPin = 2255
 def show_loading(message="Processing"):
     #Uses a for loop to display a visual loading dot animation.
     print(message, end="", flush=True)
-    for _ in range(60):
+    for _ in range(6):
         time.sleep(0.5)
         print(".", end="", flush=True)
     print("\n")

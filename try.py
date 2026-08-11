@@ -43,3 +43,50 @@
 #         print(f"found {name}'s name and their score is {studentData[name]}")
 #     except KeyError:
 #         print("Faith not found")        
+
+
+# attempts = 0
+# while attempts <2:
+#    try:
+#         choice = int(input("Please enter a lucky number:\n"))
+#         print(f"Congratulations! You choosed {choice}")
+#         break
+#    except ValueError:
+#        print("Please enter a valid number")
+#        attempts +=1  
+       
+       
+# attempts = 0
+# while attempts <2:
+#    try:
+#         choice = int(input("Please enter a lucky number:\n"))
+#         print(f"Congratulations! You choosed {choice}")
+        
+#    except ValueError:
+#        print("Please enter a valid number")
+#        attempts +=1
+
+
+
+
+
+# colors = ["red", "blue","green"]
+# positionIndex = [0,1,5]
+# for col in positionIndex:
+#     try:
+#         print(f"found {col} in colors and their position in {colors[col]}")
+#     except IndexError:
+#         print("5 not found")
+
+
+# colors = ["red", "blue","green"]       
+# attempts = 2
+
+# while attempts >= 0:
+#     try:
+#         print(f"for colors in attempts is {colors[attempts]}")
+#         attempts -=1 
+#     except IndexError:
+#         print("No more colors at the index\n attempts error reached")
+        
+        
